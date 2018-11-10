@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'organ',
+    'donation',
+    'request',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,10 +77,14 @@ WSGI_APPLICATION = 'organwebsite.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'organ',
+            'USER': "anusha",
+            'PASSWORD': "root123",
+            'HOST': "localhost",
+            'PORT': '',
+        }
 }
 
 
